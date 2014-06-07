@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JSWeather App</string>
+    <string name="action_settings">Settings</string>
+	<string name="location_hint">City</string>
+	<string name="titleText">Conditions for Gingee, IN at 2:31 pm IST</string>
+	<string name="textView1">Current Condition :</string>
+	<string name="conditionView">Mostly Cloudy, 36 C</string>
+	<string name="forecastView">Forecast :</string>
+	<string name="dayView">DAY :</string>
+	<string name="FeatureconditionView">Mostly Cloudy,</string>
+	<string name="forecastHigh">High: 38</string>
+	<string name="forecastLow">Low: 31</string>
+
+</resources>
