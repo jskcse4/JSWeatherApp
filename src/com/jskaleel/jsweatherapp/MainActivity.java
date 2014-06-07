@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
 	private EditText locationBox;
 	private Button button1;
-	private String city, cityURL;
+	private String city;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 					i.putExtra("area", city);
 					startActivity(i);
 				}				
-				Log.d("CITYURL", cityURL);
+				Log.d("CITYURL", city);
 			}
 
 			private boolean isValidCity(String city) {

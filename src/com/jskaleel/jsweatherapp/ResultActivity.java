@@ -1,6 +1,7 @@
 package com.jskaleel.jsweatherapp;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,19 +21,25 @@ public class ResultActivity extends Activity {
 	
 	class TaskAsync extends AsyncTask<Void, Void, Void> {
 		XMLHelper helper;
-		String url;
+		String cityurl;
+		ProgressDialog pd;
 
 		public TaskAsync(String url) {
-			this.url = url;
+			cityurl = url;
 		}
 
 		@Override
 		protected Void doInBackground(Void... params) {
-			helper = new XMLHelper(url);
+			helper = new XMLHelper(cityurl);
 			helper.get();
 			return null;
 		}
 		
+		protected void onPreExecute(Void... arg)
+		{
+			pd = new ProgressDialog(ResultActivity.this);
+			return;
+		}
 		protected void onPostExecute(Void result) {
 			
 			Log.d("TEST",helper.item.getTitle());
